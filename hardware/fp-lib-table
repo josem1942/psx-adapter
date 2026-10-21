@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "psx")(type "KiCad")(uri "${KIPRJMOD}/psx.pretty")(options "")(descr ""))
+)
