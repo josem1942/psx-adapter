@@ -138,7 +138,6 @@ void psx_poll_controller(psx_interface *interface) {
 
     gpio_put(CS, 1);
 
-    interface->ly = 255 - interface->ly;
     interface->ry = 255 - interface->ry;
 
     if (interface->lx <= interface->lx_dz && interface->lx >= -interface->lx_dz) {

@@ -4,12 +4,12 @@
 #include "pico/stdlib.h"
 #include "tusb.h"
 
-#define CLK 12
-#define CS 13
-#define ACK 11
-#define MOSI 14
-#define MISO 15
-#define LED 25
+#define CLK 1
+#define CS 2
+#define ACK 0
+#define MOSI 3
+#define MISO 4
+#define LED 5
 
 typedef enum psx_buttons {
     PSX_SELECT = 0x1,

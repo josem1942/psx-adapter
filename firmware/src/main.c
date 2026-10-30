@@ -15,8 +15,8 @@ int main() {
     hid_gamepad_report_t gamepad = {0};
     psx_init_interface(&psx);
 
-    gpio_init(25);
-    gpio_set_dir(25, GPIO_OUT);
+    gpio_init(LED);
+    gpio_set_dir(LED, GPIO_OUT);
 
     gpio_put(25, 1);
 
@@ -44,10 +44,10 @@ int main() {
             psx_poll_controller(&psx);
 
             if (psx.digital_buttons) {
-                gpio_put(25, 0);
+                gpio_put(LED, 0);
             }
             else {
-                gpio_put(25, 1);
+                gpio_put(LED, 1);
             }
 
             psx_convert_to_hid(&psx, &gamepad);
